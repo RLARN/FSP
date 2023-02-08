@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller
+@Controller//컨트롤러 선언!!!
 @Slf4j//로깅을 위한 골뱅이(어노테이션 문법)
 public class ArticleController {
 
