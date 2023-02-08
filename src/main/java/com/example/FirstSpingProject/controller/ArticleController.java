@@ -3,12 +3,11 @@ package com.example.FirstSpingProject.controller;
 import com.example.FirstSpingProject.dto.ArticleForm;
 import com.example.FirstSpingProject.entity.Article;
 import com.example.FirstSpingProject.repository.ArticleRepository;
-
 import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -39,5 +38,11 @@ public class ArticleController {
         //System.out.println(article.toString());
 
         return "";
+    }
+
+    @GetMapping("/articles/{id}")
+    public String show(@PathVariable Long id){
+        log.info("id = "+id);
+        return"";
     }
 }
