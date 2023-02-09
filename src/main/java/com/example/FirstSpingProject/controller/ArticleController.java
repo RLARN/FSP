@@ -40,7 +40,7 @@ public class ArticleController {
         log.info(saved.toString());
         //System.out.println(article.toString());
 
-        return "";
+        return "redirect:/articles/" + saved.getId();
     }
 
     //데이터 조회 과정

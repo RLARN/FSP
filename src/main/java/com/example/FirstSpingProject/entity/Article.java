@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -13,6 +14,7 @@ import lombok.ToString;
 @AllArgsConstructor//생성자 생성
 @NoArgsConstructor//디폴트 생성자 생성
 @ToString
+@Getter
 public class Article {
 
     @Id // 주민번호 같은것 
@@ -24,6 +26,7 @@ public class Article {
 
     @Column //db에서 컬럼 인식 위해
     private String content;
+
 
     //생성자 추가, tosting 메소드 추가
 }

@@ -1,7 +1,6 @@
 {{>layouts/header}}
 
 {{! 리스트 출력 }}
-
 <table class="table">
     <thead>
         <tr>
@@ -16,10 +15,13 @@
         {{! 모델에 등록한 데이터 이름: article }}
         <tr>
             <th>{{id}}</th>
-            <td>{{title}}</td>
+            <td><a href="/articles/{{id}}" class="text-dark text-decoration-none">{{title}}</a></td>
             <td>{{content}}</td>
         </tr>
         {{/articlelist}}
     </tbody>
 </table>
+<button class="btn btn-primary"><a href="/articles/new" class="text-white text-decoration-none">New Article</a></button> 
+
+
 {{>layouts/footer}}
