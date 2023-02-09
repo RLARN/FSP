@@ -73,4 +73,17 @@ public class ArticleController {
         //3. view 페이지를 설정한다.
         return"articles/index";
     }
+
+    //수정페이지
+    @GetMapping("/articles/{id}/edit")// {~~}변수와 PathVariable 변수의 이름이 같아야함
+    public String edit(@PathVariable Long id, Model model){
+        // 수정할 데이터를 가져오기
+        Article articleEntity = articleRepository.findById(id).orElse(null);
+
+        // model에 데이터 등록
+        model.addAttribute("article",articleEntity);
+
+        // view페이지 설정
+        return"articles/edit";
+    }
 }
