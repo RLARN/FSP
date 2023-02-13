@@ -9,6 +9,7 @@ import lombok.ToString;
 
 public class ArticleForm {
 
+    private Long id;
     private String title;
     private String content;
 
@@ -16,7 +17,7 @@ public class ArticleForm {
     //<textarea class="form-control" rows="3" name="content"></textarea> 이런식으로
 
     public Article toEntity() {
-        return new Article(null,title,content);
+        return new Article(id,title,content);
         //DTO인 폼에서 엔티티 메소드로 변환해주는 메소드
     }
 }
