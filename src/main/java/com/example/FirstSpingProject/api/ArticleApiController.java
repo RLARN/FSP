@@ -74,14 +74,14 @@ public class ArticleApiController {
         // 대상 찾기
         Article target = articleRepository.findById(id).orElse(null);
         // 잘못된 요청처리
-        if (target != null){
+        if (target == null){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
 
         // 대상 삭제
-        
+        articleRepository.delete(target);
         // 데이터 반환
-        return null;
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 
 }
