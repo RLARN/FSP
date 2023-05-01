@@ -26,7 +26,7 @@ public class ArticleController {
         return "articles/new";
     }
 
-    @PostMapping("/articles/create")
+    @PostMapping("/articles/create")//URL 연결 요청
     public String createArticle(ArticleForm form){//폼데이터를 파라매터(아티클폼)로 전달
         log.info(form.toString());
         //System.out.println(form.toString()); >>로깅으로 대체!
